@@ -79,7 +79,7 @@ body {
 }
 
 .fundo-video .video {
-	height: 100vh;	
+	height: auto;	
 }
 
 .fundo-video::after {

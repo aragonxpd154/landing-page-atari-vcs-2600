@@ -69,23 +69,20 @@ body {
 	transform: scale(1.1);
 }
 
-.bg_video{
-	position: fixed; 
-	right: 0; 
-	bottom: 0;
-	min-width: 100%; 
-	min-height: 100%;
-	width: auto; 
-	height: auto; 
-	z-index: -1000;
+.fundo-video {
+	position: absolute;
 	background-color: red;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	overflow: hidden;
 }
 
-.bg_video .video {
-	height: 100vh;	
+.fundo-video .video {
+	height: auto;	
 }
 
-.bg_video::after {
+.fundo-video::after {
 	content: '';
 	background-color: #f6465d;
 	height: 100vh;

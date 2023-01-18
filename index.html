@@ -1,8 +1,8 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
@@ -23,16 +23,13 @@
     <link rel="stylesheet" href="./src/css/responsivo.css" />
 
     <title>Atari 2600</title>
-		
-	</head>
-
-	<body>
-		<video autoplay loop poster="./src/imagens/fundo.jpg" class="bg_video">
-			<source src="./src/video/bg.webm" type="video/webm">
-			<source src="./src/video/bg.mp4" type="video/mp4">
-		</video>	
-		<body>
-		</div>
+  </head>
+  <body>
+    <div class="fundo-video">
+      <video class="video" autoplay loop muted>
+        <source src="./src/video/video-atari.mp4" type="video/mp4" />
+      </video>
+    </div>
 
     <header class="cabecalho">
       <a href="/">
@@ -74,7 +71,7 @@
             id="video"
             width="560"
             height="315"
-            src="https://www.youtube.com/watch?v=6c_PSjsTxNQ"
+            src="www.youtube.com/watch?v=6c_PSjsTxNQ"
             title="Trailer oficial"
             frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -86,3 +83,4 @@
 
     <script src="./src/js/index.js"></script>
   </body>
+</html>
