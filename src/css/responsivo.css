@@ -3,8 +3,9 @@
 		background-color: #f44336;
 	}
 
-	.fundo-video {
+	.bg_video {
 		display: none;
+		height: auto;
 	}
 
 	.container {
@@ -55,14 +56,14 @@
 	}
 
 	.modal #video {
-		width: 300px;
-		height: 169px;
+		width: 600px;
+		height: 369px;
 	}
 }
 
 @media (max-width: 376px) {
 	.modal #video {
-		width: 250px;
-		height: 140px;
+		width: 350px;
+		height: 540px;
 	}
 }
