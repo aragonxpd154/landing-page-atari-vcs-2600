@@ -1,6 +1,5 @@
 const modal = document.querySelector('.modal');
 const btnAbrirModal = document.querySelector('.botao');
-const btnAbrirModal2 = document.querySelector('.botao-linha-do-tempo');
 const btnfecharModal = document.querySelector('.fechar-modal');
 const frameSource = document.getElementById('video');
 const linkDoVideo = document.querySelector('#video').src;
