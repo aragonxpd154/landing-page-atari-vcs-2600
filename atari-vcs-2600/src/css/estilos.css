@@ -53,7 +53,7 @@ body {
   max-width: 500px;
 }
 
-.container .botao-trailer {
+.container .botao {
   background-color: #ff0021;
   color: #ffffff;
   padding: 15px;
@@ -65,24 +65,8 @@ body {
   transition: 0.7s all ease-in-out;
 }
 
-.container .botao-linha-do-tempo {
-  background-color: #ff0021;
-  color: #ffffff;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  transition: 0.7s all ease-in-out;
-}
-
-.container .botao-trailer:hover {
-  transform: scale(1.1);
-}
-
-.container.botao-linha-do-tempo:hover {
-  transform: scale(1.1);
+.container .botao:hover {
+  transform: scale(1.2);
 }
 
 .fundo-video {
@@ -97,7 +81,6 @@ body {
 }
 
 .fundo-video .video {
-  /*height: auto;	*/
   min-width: 100vw;
   min-height: 100vh;
 }
