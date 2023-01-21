@@ -17,3 +17,12 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+
+button:hover {
+  background-color: #eebbbb;
+}
+
+button:disabled {
+  background-color: #dddddd;
+  cursor: not-allowed;
+}
