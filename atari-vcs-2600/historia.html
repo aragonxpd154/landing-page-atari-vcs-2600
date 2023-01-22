@@ -185,10 +185,61 @@
   </body>
   <style>
     body {
-      margin: auto;
-      padding: auto;
+      margin: 0;
+      padding: 0;
     }
-    
+    .secao {
+      position: relative;
+    }
+    #secao-01 {
+      background-color: #2b2a2a;
+    }
+    #secao-02 {
+      background-color: #000000;
+    }
+    #secao-03 {
+      background-color: #741212;
+    }
+    #secao-04 {
+      background-color: #2b2a2a;
+    }
+    #secao-05 {
+      background-color: #000000;
+    }
+    #secao-06 {
+      background-color: #741212;
+    }
+    .icone-scroll {
+      position: absolute;
+      bottom: 3em;
+      width: 50px;
+      height: 50px;
+      background-color: #1a1a1a;
+      border-radius: 50%;
+      left: 50%;
+      margin-left: -25px;
+      cursor: pointer;
+    }
+    .scroll {
+      width: 15px;
+      height: 15px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      position: relative;
+    }
+    .scroll-next {
+      transform: rotate(45deg);
+      margin: 14px 0 0 16.5px;
+    }
+    .scroll-top {
+      transform: rotate(225deg);
+      margin: 19px 0 0 17px;
+    }
+    .scroll-top + .scroll-top {
+      top: -15px;
+      margin-top: 0;
+    }
   </style>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script>
