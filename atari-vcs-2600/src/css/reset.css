@@ -1,13 +1,29 @@
+/*
+
+    This line resets all default margins and padding for all elements
+    and sets the box-sizing property to border-box, which includes the padding and border in the total width and height of an element.
+    */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
 }
 
-ul {
-	list-style: none;
-}
+/*
+
+    This line sets the list-style property to none for all unordered lists,
+    effectively removing the default bullet points from the list items.
+    */
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
+
+/*
+
+    This line sets the text-decoration property to none for all anchor tags,
+    effectively removing the default underline from links.
+    */
