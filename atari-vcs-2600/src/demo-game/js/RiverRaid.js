@@ -26,5 +26,11 @@ function RiverRaid(canvasID) {
 RiverRaid.instancia = new RiverRaid('tela');
 
 document.onkeydown = function (evt) {
-  document.getElementById('tecla').innerHTML = evt.keyCode;
+  'use strict';
+  RiverRaid.instancia.pressinarTecla(evt);
+};
+
+document.onkeyup = function (evt) {
+  'user strict';
+  RiverRaid.instancia.liberarTecla(evt);
 };
