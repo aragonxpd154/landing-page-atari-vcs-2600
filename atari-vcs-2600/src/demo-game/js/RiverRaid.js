@@ -30,6 +30,33 @@ function RiverRaid(canvasID) {
         evt.preventDefault();
         break;
       case RiverRaid.teclaDireita:
+        this.jogador.setMoverDireita(true);
+        if (this.emPausa) {
+          this.pausar();
+        }
+        evt.preventDefault();
+        break;
+      case RiverRaid.teclaCima:
+        this.jogador.setAcelerar(true);
+        if (this.emPausa) {
+          this.pausar();
+        }
+        evt.preventDefault();
+        break;
+      case RiverRaid.teclaBaixo:
+        this.jogador.setFrear(true);
+        if (this.emPausa) {
+          this.pausar();
+        }
+        evt.preventDefault();
+        break;
+      case RiverRaid.teclaTiro:
+        this.jogador.setAtirar(true);
+        if (this.emPausa) {
+          this.pausar();
+        }
+        evt.preventDefault();
+        break;
     }
   };
 }
