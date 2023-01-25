@@ -24,3 +24,7 @@ function RiverRaid(canvasID) {
 // Fim do construtor
 
 RiverRaid.instancia = new RiverRaid('tela');
+
+document.onkeydown = function (evt) {
+  document.getElementById('tecla').innerHTML = evt.keyCode;
+};
