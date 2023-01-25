@@ -1,0 +1,144 @@
+body {
+  font-family: 'Poppins'; /* set font-family to Poppins for entire website */
+}
+
+.cabecalho {
+  display: flex; /* display elements within the header as a flex container */
+  justify-content: space-between; /* distribute elements evenly within the header */
+  padding: 30px; /* add padding to the header */
+  max-width: 1440px; /* set a maximum width for the header */
+  margin: 0 auto; /* center the header horizontally */
+}
+
+.cabecalho .logo {
+  width: 65px; /* set width of the logo */
+}
+
+.cabecalho .menu {
+  display: flex; /* display elements within the menu as a flex container */
+  align-items: center; /* align elements within the menu vertically */
+  height: 100%; /* set the menu height to 100% */
+}
+
+.cabecalho nav li a {
+  font-weight: bold; /* set font weight to bold */
+  color: #ffffff; /* set text color to white */
+  font-size: 25px; /* set font size to 25px */
+  padding: 10px 20px; /* add padding to menu items */
+  border-radius: 50px; /* add a border radius of 50px to menu items */
+  transition: 0.2s; /* add a transition effect */
+}
+
+.cabecalho nav li a:hover {
+  background: #d5011d; /* change background color on hover */
+}
+
+.container {
+  max-width: 1440px; /* set a maximum width for the container */
+  margin: 0 auto; /* center the container horizontally */
+  display: flex; /* display elements within the container as a flex container */
+  align-items: center; /* align elements within the container vertically */
+  height: calc(100vh - 132px); /* set the container height */
+  padding: 0 30px 30px; /* add padding to the container */
+}
+
+.container .descricao {
+  color: #a8adb7; /* set text color */
+  width: 85%; /* set width of the description */
+  font-size: 18px; /* set font size to 18px */
+  margin: 30px 0; /* add a margin of 30px at the top and bottom */
+}
+
+.container .imagem-titulo {
+  max-width: 500px; /* set maximum width for the title image */
+}
+
+.container .botao {
+  background-color: #ff0021; /* set background color of the button */
+  color: #ffffff; /* set text color of the button */
+  padding: 15px; /* add padding to the button */
+  font-size: 18px; /* set font size to 18px */
+  font-weight: 700; /* set font weight to 700 */
+  cursor: pointer; /* change cursor to pointer */
+  border: none; /* remove border from the button */
+  text-transform: uppercase; /* convert text to uppercase */
+  transition: 0.7s all ease-in-out; /* add a transition effect */
+}
+
+.container .botao:hover {
+  transform: scale(1.2); /* scale the button on hover */
+}
+
+.fundo-video {
+  position: fixed; /* position the element as fixed */
+  background-color: red; /* set the background color to red */
+  width: 100vw; /* set the width to 100% of the viewport */
+  height: 100vh; /* set the height to 100% of the viewport */
+  z-index: -1; /* set the z-index to -1 */
+  overflow: hidden; /* hide any overflow */
+  top: 0; /* set top position to 0 */
+  left: 0; /* set left position to 0 */
+}
+
+.fundo-video .video {
+  min-width: 100vw; /* set the minimum width to 100% of the viewport */
+  min-height: 100vh; /* set the minimum height to 100% of the viewport */
+}
+
+.fundo-video::after {
+  content: ''; /* clear the content */
+  background-color: #f6465d; /* set the background color */
+  height: 100vh; /* set the height to 100% of the viewport */
+  width: 100vw; /* set the width to 100% of the viewport */
+  position: absolute; /* position the element as absolute */
+  top: 0; /* set top position to 0 */
+  left: 0; /* set left position to 0 */
+  /* mostrar como fazer esse efeito aqui https://cssgradient.io/ */
+  background: linear-gradient(
+    90deg,
+    #040203 0%,
+    rgba(0, 0, 0, 0.85) 49%,
+    #040203 100%
+  );
+}
+
+.modal {
+  background-color: rgba(52, 52, 50, 0.749); /* set the background color */
+  position: fixed; /* position the element as fixed */
+  width: 100vw; /* set the width to 100% of the viewport */
+  height: 100vh; /* set the height to 100% of the viewport */
+  top: 0; /* set top position to 0 */
+  left: 0; /* set left position to 0 */
+  opacity: 0; /* set the initial opacity to 0 */
+  visibility: hidden; /* set the initial visibility to hidden */
+}
+
+.conteudo-modal {
+  display: flex; /* display the element as a flex container */
+  justify-content: center; /* center the items horizontally */
+  align-items: center; /* center the items vertically */
+  flex-direction: column; /* set the direction of the flex items as column */
+  height: 100vh; /* set the height to 100% of the viewport */
+  border-radius: 5px; /* set the border radius to 5px */
+  gap: 15px; /* set the gap between flex items to 15px */
+}
+
+.fechar-modal {
+  width: 40px; /* set the width to 40px */
+  line-height: 40px; /* set the line height to 40px */
+  text-align: center; /* center the text */
+  cursor: pointer; /* change cursor to pointer */
+  border-radius: 10px; /* set the border radius to 10px */
+  background-color: #ffffff; /* set the background color to white */
+}
+
+.modal iframe {
+  width: 640px; /* set the width to 640px */
+  height: 360px; /* set the height to 360px */
+  border-width: 0px; /* remove the border */
+}
+
+.aberto {
+  opacity: 1; /* set the opacity to 1 */
+  visibility: visible; /* set the visibility to visible */
+}
