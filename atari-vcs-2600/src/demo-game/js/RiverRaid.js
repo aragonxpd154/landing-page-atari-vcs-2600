@@ -19,9 +19,28 @@ function RiverRaid(canvasID) {
     this.cenario.desenhar(this.ctx);
   };
   this.desenharTudo();
+
+  this.pressinarTecla = function (evt) {
+    switch (evt.keyCode) {
+      case RiverRaid.teclaEsquerda:
+        this.jogador.setMoverEsquerda(true);
+        if (this.emPausa) {
+          this.pausar();
+        }
+        evt.preventDefault();
+        break;
+      case RiverRaid.teclaDireita:
+    }
+  };
 }
 
 // Fim do construtor
+
+RiverRaid.teclaEsquerda = 65; // A
+RiverRaid.teclaDireita = 68; // D
+RiverRaid.teclaCima = 87; // W
+RiverRaid.teclaBaixo = 83; // S
+RiverRaid.teclaTiro = 71; // G
 
 RiverRaid.instancia = new RiverRaid('tela');
 
