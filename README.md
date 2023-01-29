@@ -9,8 +9,7 @@ The Atari 2600 was a groundbreaking gaming console that took the world by storm 
 <nav>
         <ul class="menu">
           <li>
-          <img alt="Acessar o projeto" src="https://raw.githubusercontent.com/aragonxpd154/landing-page-atari-vcs-2600/main/src/imagens/logo-descricao.png"/>
-            <a href="./index.html">ACESSAR O PROJETO</a>
+          <img href="https://aragonxpd154.github.io/landing-page-atari-vcs-2600/" alt="Acessar o projeto" src="https://raw.githubusercontent.com/aragonxpd154/landing-page-atari-vcs-2600/main/src/imagens/acessar%20o%20projeto.png"/>
           </li>
         </ul>
       </nav>
