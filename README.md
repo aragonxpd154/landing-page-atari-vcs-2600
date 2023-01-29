@@ -5,8 +5,9 @@
 <h4 align="center">
 
 The Atari 2600 was a groundbreaking gaming console that took the world by storm in the late 1970s and early 1980s. This interactive and responsive webpage showcases the history of the Atari 2600, from its initial success to the end of its project. The webpage also includes a section on the hardware used in the construction of the 2600, including the circuits and controllers of the time
-
-<img href="https://aragonxpd154.github.io/landing-page-atari-vcs-2600/" alt="Acessar o projeto" src="https://raw.githubusercontent.com/aragonxpd154/landing-page-atari-vcs-2600/main/src/imagens/acessar%20o%20projeto.png"/>
+<a href="https://aragonxpd154.github.io/landing-page-atari-vcs-2600/">
+<img alt="Acessar o projeto" src="https://raw.githubusercontent.com/aragonxpd154/landing-page-atari-vcs-2600/main/src/imagens/acessar%20o%20projeto.png"/>
+</a>
 
 </h4>
 
