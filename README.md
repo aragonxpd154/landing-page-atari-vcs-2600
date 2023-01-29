@@ -22,9 +22,7 @@ The Atari 2600 was a groundbreaking gaming console that took the world by storm 
 
 <p align="center">
 <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#information_source">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#do-it-yourself">Do It Yourself</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#status">Development Status</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#information_source">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#memo-license">License</a>
 </p>
 
@@ -39,7 +37,7 @@ This project is still in the development stage and using the following technolog
 - [jquery-3.1.1.min](https://code.jquery.com/jquery-3.1.1.min.js)
 - [GoogleAPI Fonts](https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap)
 
-## :information_source: How To Use
+## :information_source: About
 
 _The Atari 2600: A Journey Through Gaming History_
 
