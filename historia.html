@@ -25,7 +25,6 @@
     <title>| História | Atari 2600 |</title>
   </head>
   <body>
-    <script src="./src/js/index.js"></script>
     <div id="secao-01" class="secao">
       <header class="cabecalho">
       <a href="/">
@@ -49,7 +48,7 @@
           src="./src/imagens/titulo.png"
           alt="imagem do título do filme"
         />
-        <p class="descricao">
+        <p class="descricao-historia">
           A Atari foi fundada em 1972 por Nolan Bushnell e Ted Dabney e foi uma das primeiras empresas a popularizar e difundir jogos em todo o mundo. A marca alcançou sucesso com o lançamento de Pong para fliperamas e alcançou sua revolução em 1977, quando lançou o VCS (Video Computer System), conhecido como Atari 2600, projetado por Jay Miner. Este console chegou ao Brasil em 1983 e se tornou um sucesso de vendas entre 1984 e 1986, e seus jogos ainda são lembrados por muitos que viveram sua juventude naquela época.
         </p>
 
@@ -79,7 +78,7 @@
           src="./src/imagens/titulo.png"
           alt="imagem do título do filme"
         />
-        <p class="descricao">
+        <p class="descricao-historia">
           Em 1973, a Atari adquiriu a Cyan Engineering, uma empresa especializada em desenvolvimento de jogos e começou a trabalhar em um sistema de video game avançado, chamado "Stella". A diferença entre ele e as máquinas anteriores é que ele usava uma CPU completa, o MOS Technology 6502, em vez de lógica de programação fixa para rodar um grande número de jogos. Ele também incluía chips de RAM e E/S, MOS Technology 6532, um chip de display e som próprio, chamado TIA, para melhorar a experiência de jogo
         </p>
 
@@ -111,7 +110,7 @@
           src="./src/imagens/titulo.png"
           alt="imagem do título do filme"
         />
-        <p class="descricao">
+        <p class="descricao-historia">
           A equipe de desenvolvimento estava trabalhando arduamente para lançar seu produto antes de concorrentes. Eles contrataram Jay Miner, um especialista em chips, que conseguiu condensar vários circuitos em um único chip, tornando o TIA único. Após testes, o sistema estava pronto para ser vendido e foi lançado em 1977, custando cerca de 100 milhões de dólares. O preço inicial foi de 199 dólares, incluindo 9 jogos, e foi um sucesso comercial.
         </p>
 
@@ -142,7 +141,7 @@
           src="./src/imagens/titulo.png"
           alt="imagem do título do filme"
         />
-        <p class="descricao">
+        <p class="descricao-historia">
           Em 1979, a Atari presenteou o mundo com o lançamento do Atari 2600 e causou um fenômeno de vendas. O console se tornou o presente de Natal mais desejado, graças aos seus jogos incríveis e exclusivos. Milhões de unidades foram vendidas no ano de lançamento. A licença do clássico jogo de arcade Space Invaders, aumentou ainda mais a popularidade do console, levando as vendas a dobrarem novamente para mais de 2 milhões de unidades vendidas. Este sucesso continuou nos dois anos seguintes, com quase 8 milhões de unidades vendidas em 1982. O Atari 2600 se tornou um ícone da indústria de games e marcou época.
         </p>
 
@@ -174,7 +173,7 @@
           src="./src/imagens/titulo.png"
           alt="imagem do título do filme"
         />
-        <p class="descricao">
+        <p class="descricao-historia">
           A Atari alcançou o topo da indústria de jogos com o lançamento do Atari 2600, mas acabou enfrentando dificuldades devido a projetos mal-sucedidos e descontentamento dos funcionários. Muitos desenvolvedores de jogos deixaram a empresa para fundar suas próprias, como a Activision, que rapidamente superou a Atari em popularidade. A popularidade dos jogos começou a declinar no final dos anos 80 devido ao surgimento de computadores com capacidades gráficas e sonoras superiores. Apesar das dificuldades, o Atari 2600 foi fundamental para o desenvolvimento tecnológico e marcou a memória de muitos jovens da época
         </p>
 
@@ -183,66 +182,9 @@
    
     </div>
   </body>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .secao {
-      position: relative;
-    }
-    #secao-01 {
-      background-color: #2b2a2a;
-    }
-    #secao-02 {
-      background-color: #000000;
-    }
-    #secao-03 {
-      background-color: #741212;
-    }
-    #secao-04 {
-      background-color: #2b2a2a;
-    }
-    #secao-05 {
-      background-color: #000000;
-    }
-    #secao-06 {
-      background-color: #741212;
-    }
-    .icone-scroll {
-      position: absolute;
-      bottom: 3em;
-      width: 50px;
-      height: 50px;
-      background-color: #1a1a1a;
-      border-radius: 50%;
-      left: 50%;
-      margin-left: -25px;
-      cursor: pointer;
-    }
-    .scroll {
-      width: 15px;
-      height: 15px;
-      border-right: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-      display: inline-block;
-      position: relative;
-    }
-    .scroll-next {
-      transform: rotate(45deg);
-      margin: 14px 0 0 16.5px;
-    }
-    .scroll-top {
-      transform: rotate(225deg);
-      margin: 19px 0 0 17px;
-    }
-    .scroll-top + .scroll-top {
-      top: -15px;
-      margin-top: 0;
-    }
-  </style>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script>
+   
     var _AlturaDocumento = $(window).height(); //pega altura da janela
 
     function AlturaSecao() {
@@ -261,22 +203,16 @@
       } else if ($(this).parent('.secao').is('#secao-03')) {
         //verifica se está na terceira seção e rola para a quarta
         body.animate({ scrollTop: _AlturaDocumento * 3 }, '500');
-      }
-        else if ($(this).parent('.secao').is('#secao-04')){
-        //verifica se está na terceira seção e rola para a quarta
+      } else if ($(this).parent('.secao').is('#secao-04')){
+        //verifica se está na terceira seção e rola para a quinta
         body.animate({ scrollTop: _AlturaDocumento * 4 }, '500');
-      } 
-        else if ($(this).parent('.secao').is('#secao-05')){
-        //verifica se está na terceira seção e rola para a quarta
-        body.animate({ scrollTop: _AlturaDocumento * 5 }, '500');
       }else {
         //rola para o início da página
-        body.animate({ scrollTop: 0 }, '800');
+        body.animate({ scrollTop: 0}, '800');
       }
     }
-
     $('.icone-scroll').click(ScrollSecao); //chama a função na ação de click no ícone
 
-    $(AlturaSecao); //chama a nossa função só depois que o documento estiver completamente carregado
+    $(AlturaSecao); //chama a função só depois que o documento estiver completamente carregado
   </script>
 </html>

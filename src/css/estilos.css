@@ -1,5 +1,7 @@
 body {
   font-family: 'Poppins'; /* set font-family to Poppins for entire website */
+  margin: 0;
+  padding: 0;
 }
 
 .cabecalho {
@@ -45,6 +47,13 @@ body {
 .container .descricao {
   color: #a8adb7; /* set text color */
   width: 85%; /* set width of the description */
+  font-size: 18px; /* set font size to 18px */
+  margin: 30px 0; /* add a margin of 30px at the top and bottom */
+}
+
+.container .descricao-historia {
+  color: #a8adb7; /* set text color */
+  width: 100%; /* set width of the description */
   font-size: 18px; /* set font size to 18px */
   margin: 30px 0; /* add a margin of 30px at the top and bottom */
 }
@@ -141,4 +150,57 @@ body {
 .aberto {
   opacity: 1; /* set the opacity to 1 */
   visibility: visible; /* set the visibility to visible */
+}
+
+.secao {
+  position: relative;
+}
+#secao-01 {
+  background-color: #2b2a2a;
+}
+#secao-02 {
+  background-color: #000000;
+}
+#secao-03 {
+  background-color: #741212;
+}
+#secao-04 {
+  background-color: #2b2a2a;
+}
+#secao-05 {
+  background-color: #000000;
+}
+#secao-06 {
+  background-color: #741212;
+}
+.icone-scroll {
+  position: absolute;
+  bottom: 3em;
+  width: 50px;
+  height: 50px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -25px;
+  cursor: pointer;
+}
+.scroll {
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  position: relative;
+}
+.scroll-next {
+  transform: rotate(45deg);
+  margin: 14px 0 0 16.5px;
+}
+.scroll-top {
+  transform: rotate(225deg);
+  margin: 19px 0 0 17px;
+}
+.scroll-top + .scroll-top {
+  top: -15px;
+  margin-top: 0;
 }
