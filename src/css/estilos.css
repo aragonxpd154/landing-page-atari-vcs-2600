@@ -53,9 +53,10 @@ body {
 
 .container .descricao-historia {
   color: #a8adb7; /* set text color */
-  width: 100%; /* set width of the description */
+  width: 85%; /* set width of the description */
   font-size: 18px; /* set font size to 18px */
   margin: 30px 0; /* add a margin of 30px at the top and bottom */
+  padding: 0px; /* add padding 30px /*
 }
 
 .container .imagem-titulo {
