@@ -38,9 +38,6 @@
         </ul>
       </nav>
     </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
       <main class="container">
       <div class="informacoes">
         <img
@@ -51,7 +48,6 @@
         <p class="descricao-historia" align="justify" id="descricao1">
           A Atari foi fundada em 1972 por Nolan Bushnell e Ted Dabney e foi uma das primeiras empresas a popularizar e difundir jogos em todo o mundo. A marca alcançou sucesso com o lançamento de Pong para fliperamas e alcançou sua revolução em 1977, quando lançou o VCS (Video Computer System), conhecido como Atari 2600, projetado por Jay Miner. Este console chegou ao Brasil em 1983 e se tornou um sucesso de vendas entre 1984 e 1986, e seus jogos ainda são lembrados por muitos que viveram sua juventude naquela época.
         </p>
-
       </div>
       <img class="atari" src="./src/imagens/criadores.png" alt="O fiel" />
     </div>
@@ -68,9 +64,6 @@
         </ul>
       </nav>
     </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
       <main class="container">
       <div class="informacoes">
           <img
@@ -98,11 +91,7 @@
           </li>
         </ul>
       </nav>
-    </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
-  
+    </header>  
       <main class="container">
       <div class="informacoes">
           <img
@@ -131,9 +120,6 @@
         </ul>
       </nav>
     </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
       <main class="container">
       <div class="informacoes">
           <img
@@ -162,10 +148,6 @@
         </ul>
       </nav>
     </header>
-      <span class="icone-scroll">
-        <span class="scroll-top scroll"></span>
-        <span class="scroll-top scroll"></span>
-      </span>
       <main class="container">
       <div class="informacoes">
           <img
@@ -186,6 +168,16 @@
   <script>
    
     var _AlturaDocumento = $(window).height(); //pega altura da janela
+	var _LarguraDocumento =  $(window).width(); // pega a largura da janela
+	console.log(_AlturaDocumento);
+	console.log(_LarguraDocumento);
+	
+	if (_LarguraDocumento <= 1200){
+	console.log("Direcionando para uma pagina adequada para sua tela");
+	window.location.href =("./src/demo-game/index.html");
+	}else{
+	console.log("Tudo certo");
+	}
 
     function AlturaSecao() {
       $('.secao').height(_AlturaDocumento); //atribui o valor da variável a todas as divs com a classe secao
@@ -196,7 +188,7 @@
       var body = $('html, body');
       if ($(this).parent('.secao').is('#secao-01')) {
         //verifica se está na primeira seção e rola para a segunda
-        body.animate({ scrollTop: _AlturaDocumento }, '500');
+        body.animate({ scrollTop: _AlturaDocumento }, '900');
       } else if ($(this).parent('.secao').is('#secao-02')) {
         //verifica se está na segunda seção e rola para a terceira
         body.animate({ scrollTop: _AlturaDocumento * 2 }, '500');
