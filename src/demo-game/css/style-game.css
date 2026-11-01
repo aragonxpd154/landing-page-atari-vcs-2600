@@ -1,28 +1,624 @@
-body {
-  background-color: #333333;
-  text-align: center;
+/*
+ * Demo Games — segue a identidade da página inicial:
+ * vídeo de fundo com degradê escuro, Poppins, vermelho #ff0021 e cinza #a8adb7.
+ */
+
+:root {
+  --vermelho: #ff0021;
+  --vermelho-hover: #d5011d;
+  --cinza-texto: #a8adb7;
+  --preto: #040203;
+  --madeira-1: #5a2f16;
+  --madeira-2: #8a4f26;
+  --laranja-console: #e8742c;
 }
 
-#tela {
-  background-color: #2255aa;
-  border: 1px solid #ffffff;
+html {
+  scroll-behavior: smooth;
 }
 
-button {
-  background-color: #ee9999;
-  color: white;
-  border: 1px solid red;
-  width: 100px;
-  height: 30px;
-  font-weight: bold;
+body.pagina-demo {
+  background-color: var(--preto);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.pagina-demo .cabecalho .menu {
+  gap: 4px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Layout                                                              */
+/* ------------------------------------------------------------------ */
+.demo {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) minmax(0, 1.3fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.demo-info .imagem-titulo {
+  max-width: 340px;
+  width: 70%;
+  display: block;
+}
+
+.demo-subtitulo {
+  margin-top: 14px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--vermelho);
+}
+
+.demo-info .descricao {
+  color: var(--cinza-texto);
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 18px 0 28px;
+  max-width: 560px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Cartuchos                                                           */
+/* ------------------------------------------------------------------ */
+.cartuchos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cartucho {
+  --cor-etiqueta: var(--vermelho);
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  align-items: center;
+  padding: 12px 14px 12px 12px;
+  background: linear-gradient(180deg, #1f1d1e 0%, #121011 100%);
+  border: 2px solid #2c2a2b;
+  border-radius: 6px 6px 12px 12px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
   cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-button:hover {
-  background-color: #eebbbb;
+/* "ranhuras" do topo do cartucho */
+.cartucho::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 4px;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, #333 0 6px, transparent 6px 10px);
+  opacity: 0.6;
 }
 
-button:disabled {
-  background-color: #dddddd;
+.cartucho:hover {
+  transform: translateY(-3px);
+  border-color: #4a4748;
+}
+
+.cartucho:focus-visible {
+  outline: 3px solid #ffd23f;
+  outline-offset: 2px;
+}
+
+.cartucho.ativo {
+  border-color: var(--vermelho);
+  box-shadow: 0 0 0 1px var(--vermelho), 0 10px 28px rgba(255, 0, 33, 0.25);
+}
+
+.cartucho-numero {
+  grid-row: 1 / span 2;
+  font-size: 26px;
+  font-weight: 700;
+  color: #4a4748;
+  line-height: 1;
+  min-width: 34px;
+}
+
+.cartucho.ativo .cartucho-numero {
+  color: var(--vermelho);
+}
+
+.cartucho-etiqueta {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 10px 6px 12px;
+  margin-top: 6px;
+  border-left: 5px solid var(--cor-etiqueta);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+  border-radius: 2px;
+  min-width: 0;
+}
+
+.cartucho-titulo {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cartucho-meta {
+  font-size: 13px;
+  color: var(--cinza-texto);
+}
+
+.cartucho-recorde {
+  grid-column: 2;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #7c808a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cartucho-recorde strong {
+  color: #ffd23f;
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------------ */
+/* Console / TV                                                        */
+/* ------------------------------------------------------------------ */
+.demo-console {
+  width: 100%;
+  max-width: 780px;
+  justify-self: center;
+  scroll-margin-top: 16px;
+}
+
+.tv {
+  background: linear-gradient(180deg, #2b2a2a 0%, #161415 100%);
+  border-radius: 18px;
+  padding: 18px 18px 0;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.tv-tela {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid #0b0a0a;
+}
+
+.tv-tela canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  touch-action: none;
+  outline: none;
+}
+
+/* linhas de varredura + vinheta de tubo CRT */
+.tv-tela::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at center, transparent 62%, rgba(0, 0, 0, 0.55) 100%);
+  border-radius: 10px;
+}
+
+.tv-tela:focus-within {
+  box-shadow: 0 0 0 2px rgba(255, 0, 33, 0.5);
+}
+
+.tv-grade {
+  height: 26px;
+  margin: 16px -18px 0;
+  background: repeating-linear-gradient(180deg, #0e0d0d 0 3px, #2b2a2a 3px 6px);
+}
+
+.tv-madeira {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 46px;
+  margin: 0 -18px;
+  padding: 0 22px;
+  background:
+    repeating-linear-gradient(92deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 9px, rgba(255, 255, 255, 0.05) 9px 11px, transparent 11px 19px),
+    linear-gradient(180deg, var(--madeira-2) 0%, var(--madeira-1) 100%);
+  border-top: 2px solid #3a1d0c;
+}
+
+.tv-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3a0a0e;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s, box-shadow 0.3s;
+  flex: none;
+}
+
+.tv.ligada .tv-led {
+  background: var(--vermelho);
+  box-shadow: 0 0 8px var(--vermelho);
+}
+
+.tv-led.jogando {
+  animation: piscar-led 1.2s ease-in-out infinite;
+}
+
+@keyframes piscar-led {
+  50% { opacity: 0.55; }
+}
+
+.tv-marca {
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--laranja-console);
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.tv-cartucho {
+  margin-left: auto;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Botões (mesmo estilo da página inicial)                             */
+/* ------------------------------------------------------------------ */
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.demo .botao {
+  background-color: var(--vermelho);
+  color: #ffffff;
+  padding: 15px 22px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.4s all ease-in-out;
+}
+
+.demo .botao:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.demo .botao:focus-visible {
+  outline: 3px solid #ffd23f;
+  outline-offset: 2px;
+}
+
+.demo .botao-secundario {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--vermelho);
+}
+
+.demo .botao-secundario:hover:not(:disabled) {
+  background-color: var(--vermelho);
+}
+
+.demo .botao:disabled {
+  opacity: 0.4;
   cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------------ */
+/* Detalhes do jogo                                                    */
+/* ------------------------------------------------------------------ */
+.jogo-detalhes {
+  margin-top: 24px;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.45);
+  border-left: 4px solid var(--vermelho);
+}
+
+.jogo-detalhes h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.jogo-meta {
+  color: var(--vermelho);
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+}
+
+.jogo-resumo,
+.jogo-controles {
+  color: var(--cinza-texto);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.jogo-controles {
+  margin-top: 10px;
+}
+
+.jogo-controles strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.jogo-atalhos {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6b6f78;
+}
+
+/* ------------------------------------------------------------------ */
+/* Controles de toque (aparecem só em telas sensíveis ao toque)        */
+/* ------------------------------------------------------------------ */
+.controles-toque {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 56px);
+  grid-template-rows: repeat(3, 56px);
+  gap: 4px;
+}
+
+.dpad button,
+.botao-fogo {
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+}
+
+.dpad button {
+  background: #1c1a1b;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 0 4px 0 #000;
+}
+
+.dpad button.ativo {
+  background: #3a3738;
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #000;
+}
+
+.dpad-cima { grid-column: 2; grid-row: 1; }
+.dpad-esq { grid-column: 1; grid-row: 2; }
+.dpad-dir { grid-column: 3; grid-row: 2; }
+.dpad-baixo { grid-column: 2; grid-row: 3; }
+
+.botao-fogo {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff4a5e 0%, var(--vermelho) 45%, #a40015 100%);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  box-shadow: 0 6px 0 #5a000c, 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.botao-fogo.ativo {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #5a000c;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .controles-toque {
+    display: flex;
+  }
+}
+
+/* adicionada via JS quando o aparelho tem tela sensível ao toque */
+.tem-toque .controles-toque {
+  display: flex;
+}
+
+/* ------------------------------------------------------------------ */
+/* Rodapé                                                              */
+/* ------------------------------------------------------------------ */
+.rodape {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 30px 36px;
+}
+
+.rodape p {
+  font-size: 13px;
+  color: #6b6f78;
+  max-width: 780px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsivo (acompanha o comportamento da página inicial)            */
+/* ------------------------------------------------------------------ */
+@media (max-width: 1200px) {
+  body.pagina-demo {
+    background-color: #f44336;
+  }
+
+  .demo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .demo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .demo-subtitulo {
+    color: #ffffff;
+  }
+
+  .demo-info .descricao {
+    color: #ffffff;
+  }
+
+  .cartuchos {
+    width: 100%;
+    max-width: 780px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .demo-console {
+    grid-row: 2;
+  }
+
+  .jogo-detalhes {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .demo .botao-secundario {
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0 2px #ffffff;
+  }
+
+  .rodape p {
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .jogo-atalhos {
+    color: #a8adb7;
+  }
+}
+
+@media (max-width: 760px) {
+  .cartuchos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .demo {
+    padding: 0 16px 24px;
+  }
+
+  .cabecalho nav li a {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .demo-info .imagem-titulo {
+    width: 60%;
+  }
+
+  .demo-info .descricao {
+    font-size: 16px;
+  }
+
+  .cartuchos {
+    gap: 10px;
+  }
+
+  .cartucho {
+    padding: 10px 10px 10px 8px;
+    column-gap: 8px;
+  }
+
+  .cartucho-numero {
+    font-size: 18px;
+    min-width: 22px;
+  }
+
+  .cartucho-titulo {
+    font-size: 14px;
+  }
+
+  .cartucho-meta {
+    font-size: 11px;
+  }
+
+  .tv {
+    padding: 10px 10px 0;
+    border-radius: 12px;
+  }
+
+  .tv-grade {
+    margin: 10px -10px 0;
+    height: 16px;
+  }
+
+  .tv-madeira {
+    margin: 0 -10px;
+    height: 38px;
+    padding: 0 14px;
+  }
+
+  .tv-marca {
+    font-size: 12px;
+  }
+
+  .tv-cartucho {
+    display: none;
+  }
+
+  .acoes {
+    gap: 10px;
+  }
+
+  .demo .botao {
+    flex: 1 1 auto;
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .dpad {
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+  }
+
+  .botao-fogo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .rodape {
+    padding: 0 16px 28px;
+  }
 }

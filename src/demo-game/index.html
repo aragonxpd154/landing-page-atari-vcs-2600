@@ -1,31 +1,118 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-BR">
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style-game.css" />
-    <script src="js/Cenario.js"></script>
-    <script src="js/Inimigo.js"></script>
-    <script src="js/Jogador.js"></script>
-    <script src="js/Tiro.js"></script>
-    <script src="js/mapa01.js"></script>
-    <script src="js/mapa02.js"></script>
-    <body>
-      <canvas id="tela" width="400" height="550"
-        >Navegador não suporta essa aplicação</canvas
-      >
-      <br />
-      <button onclick="RiverRaid.novoJogo('tela')" id="btnNovo">
-        Novo Jogo
-      </button>
-      <button onclick="RiverRaid.pausar()" id="btnPausa">Pausar</button>
-      <!-- 
-      <p id="tecla"></p>
-      -->
-      <p>
-        | A | S | D | W |: Mover<br />
-        G: Atira
-      </p>
-      <script src="js/RiverRaid.js"></script>
-    </body>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reviva seis clássicos do Atari 2600 direto no navegador: Pong, Breakout, Invasores, Asteroides, Freeway e River Raid."
+    />
+
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="../css/responsivo.css" />
+    <link rel="stylesheet" href="css/style-game.css" />
+
+    <title>| Demo Games | Atari 2600 |</title>
   </head>
+  <body class="pagina-demo">
+    <div class="fundo-video">
+      <video class="video" autoplay loop muted playsinline>
+        <source src="../video/video-atari.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <header class="cabecalho">
+      <a href="../../index.html">
+        <img class="logo" src="../imagens/logo-atari.png" alt="logo atari" />
+      </a>
+      <nav>
+        <ul class="menu">
+          <li><a href="../../historia.html">HISTÓRIA</a></li>
+          <li><a href="../../hardware.html">HARDWARE</a></li>
+          <li><a href="../../index.html">VOLTAR</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="demo">
+      <section class="demo-info">
+        <img class="imagem-titulo" src="../imagens/titulo.png" alt="Atari 2600" />
+        <h1 class="demo-subtitulo">Demo Games</h1>
+        <p class="descricao">
+          Escolha um cartucho e reviva seis clássicos que marcaram a era do
+          Atari 2600 — refeitos do zero em JavaScript, direto no navegador.
+        </p>
+
+        <ul class="cartuchos" id="cartuchos" aria-label="Escolha um jogo"></ul>
+      </section>
+
+      <section class="demo-console" aria-label="Console">
+        <div class="tv" id="tv">
+          <div class="tv-tela">
+            <canvas id="tela" width="320" height="240" tabindex="0" aria-label="Tela do jogo">
+              Seu navegador não suporta canvas.
+            </canvas>
+          </div>
+          <div class="tv-grade" aria-hidden="true"></div>
+          <div class="tv-madeira" aria-hidden="true">
+            <span class="tv-led" id="led"></span>
+            <span class="tv-marca">video computer system</span>
+            <span class="tv-cartucho" id="tv-cartucho">sem cartucho</span>
+          </div>
+        </div>
+
+        <div class="controles-toque" id="controles-toque" aria-hidden="true">
+          <div class="dpad">
+            <button type="button" class="dpad-cima" data-tecla="up" aria-label="Cima">▲</button>
+            <button type="button" class="dpad-esq" data-tecla="left" aria-label="Esquerda">◀</button>
+            <button type="button" class="dpad-dir" data-tecla="right" aria-label="Direita">▶</button>
+            <button type="button" class="dpad-baixo" data-tecla="down" aria-label="Baixo">▼</button>
+          </div>
+          <button type="button" class="botao-fogo" data-tecla="fire" aria-label="Fogo">FOGO</button>
+        </div>
+
+        <div class="acoes">
+          <button type="button" class="botao" id="btn-iniciar" disabled>Iniciar</button>
+          <button type="button" class="botao botao-secundario" id="btn-pausar" disabled>Pausar</button>
+          <button type="button" class="botao botao-secundario" id="btn-som" aria-pressed="true">Som: ligado</button>
+        </div>
+
+        <div class="jogo-detalhes" id="jogo-detalhes" hidden>
+          <h2 id="jogo-titulo"></h2>
+          <p class="jogo-meta" id="jogo-meta"></p>
+          <p class="jogo-resumo" id="jogo-resumo"></p>
+          <p class="jogo-controles"><strong>Controles:</strong> <span id="jogo-controles"></span></p>
+          <p class="jogo-atalhos">P ou Esc pausa · M liga/desliga o som · Enter inicia</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>
+        Os jogos desta página são remakes originais em JavaScript, feitos como
+        homenagem — nenhuma ROM ou arte original é utilizada. Atari, Activision
+        e os nomes dos jogos pertencem aos seus respectivos donos.
+      </p>
+    </footer>
+
+    <script src="js/engine.js"></script>
+    <script src="js/games/pong.js"></script>
+    <script src="js/games/breakout.js"></script>
+    <script src="js/games/invaders.js"></script>
+    <script src="js/games/asteroids.js"></script>
+    <script src="js/games/freeway.js"></script>
+    <script src="js/games/riverraid.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

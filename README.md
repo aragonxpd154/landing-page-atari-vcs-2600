@@ -39,14 +39,14 @@ The Atari 2600 was a groundbreaking gaming console that took the world by storm 
 
 This project is still in the development stage and using the following technologies
 
-- [jquery-3.1.1.min](https://code.jquery.com/jquery-3.1.1.min.js)
+- HTML5, CSS3 and vanilla JavaScript (Canvas 2D + Web Audio API) — no build step, no dependencies
 - [GoogleAPI Fonts](https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap)
 
 ## :information_source: About
 
 _The Atari 2600: A Journey Through Gaming History_
 
-The Atari 2600 was a groundbreaking gaming console that took the world by storm in the late 1970s and early 1980s. This interactive and responsive webpage showcases the history of the Atari 2600, from its initial success to the end of its project. The webpage also includes a section on the hardware used in the construction of the 2600, including the circuits and controllers of the time. Finally, the webpage features a fully-functional JavaScript simulation of the classic game River Raid, giving users a chance to relive the glory days of the 2600.
+The Atari 2600 was a groundbreaking gaming console that took the world by storm in the late 1970s and early 1980s. This interactive and responsive webpage showcases the history of the Atari 2600, from its initial success to the end of its project. The webpage also includes a section on the hardware used in the construction of the 2600, including the circuits and controllers of the time. Finally, the webpage features a Demo Games page with six playable JavaScript remakes of 2600 classics — Pong, Breakout, Space Invaders, Asteroids, Freeway and River Raid — giving users a chance to relive the glory days of the 2600.
 
 _The History of the 2600_
 
@@ -56,9 +56,34 @@ _The Hardware Behind the 2600_
 
 The 2600 was much more than just a gaming console. It was a complex piece of hardware, incorporating advanced circuitry and controllers to deliver an unparalleled gaming experience. This section of the webpage explores the hardware behind the 2600, showcasing the technological innovations that made it possible. From the use of integrated circuits to the custom controllers, the 2600 pushed the boundaries of what was possible in home gaming.
 
-_The Game: River Raid_
+_Demo Games: six Atari 2600 classics_
 
-One of the most iconic games of the 2600 was the classic title River Raid. This section of the webpage features a fully-functional JavaScript simulation of the game, giving users a chance to experience the excitement of River Raid for themselves. With its smooth animations and responsive gameplay, the simulation brings the classic game to life in a whole new way.
+The **Demo Game** page shares the look of the home page (video background, Poppins, red buttons) and turns the screen into a little Atari console: pick a cartridge and play six classics, rebuilt from scratch in JavaScript as a tribute — no original ROMs or artwork are used.
+
+| # | Game | Original release on the 2600 | Controls |
+|---|------|------------------------------|----------|
+| 01 | Pong | Video Olympics — Atari, 1977 | `W` `S` / `↑` `↓` (or mouse/finger) |
+| 02 | Breakout | Atari, 1978 | `A` `D` / `←` `→`, `Space` launches |
+| 03 | Invasores (Space Invaders tribute) | Atari, 1980 | `A` `D` / `←` `→`, `Space` fires |
+| 04 | Asteroides (Asteroids tribute) | Atari, 1981 | `←` `→` rotate, `↑` thrust, `Space` fires, `↓` hyperspace |
+| 05 | Freeway | Activision, 1981 | `W` `S` / `↑` `↓` |
+| 06 | River Raid | Activision, 1982 | arrows move/accelerate/brake, `Space` fires |
+
+Shortcuts: `Enter` starts, `P`/`Esc` pauses, `M` toggles sound. On phones and tablets an on-screen D-pad and FIRE button appear. High scores are saved in the browser (localStorage), and each game can be opened directly with a hash, e.g. `src/demo-game/index.html#riverraid`.
+
+Code layout:
+
+```
+src/demo-game/
+├── index.html          # page (same design as the home page)
+├── css/style-game.css  # console, cartridges, touch controls
+└── js/
+    ├── engine.js       # game loop, input, sound, 3x5 pixel font, high scores
+    ├── main.js         # wires the page UI to the engine
+    └── games/          # one file per game: pong, breakout, invaders, asteroids, freeway, riverraid
+```
+
+To add a new game, create a file in `js/games/` that calls `Atari.register({ id, title, publisher, year, create(api) { return { update(input), draw(ctx) } } })` and add a `<script>` tag for it in `index.html`.
 
 _Ongoing Improvements_
 
