@@ -1,218 +1,673 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="shortcut icon"
-      href="./src/imagens/favicon.ico"
-      type="image/x-icon"
+    <meta
+      name="description"
+      content="Por dentro do Atari 2600: a placa-mãe, o processador 6507, o chip de vídeo e som TIA, o RIOT 6532, a memória, o vídeo e os controles."
     />
+
+    <link rel="shortcut icon" href="./src/imagens/favicon.ico" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/estilos.css" />
     <link rel="stylesheet" href="./src/css/responsivo.css" />
-    <meta charset="utf-8" />
-    <title>| História | Atari 2600 |</title>
+    <link rel="stylesheet" href="./src/css/hardware.css" />
+
+    <title>| Hardware | Atari 2600 |</title>
   </head>
-  <body>
-    <div id="secao-01" class="secao">
-      <header class="cabecalho">
-      <a href="/">
+  <body class="pagina-hardware">
+    <div class="fundo-video">
+      <video class="video" autoplay loop muted playsinline>
+        <source src="./src/video/video-atari.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <header class="cabecalho">
+      <a href="./index.html">
         <img class="logo" src="./src/imagens/logo-atari.png" alt="logo atari" />
       </a>
       <nav>
         <ul class="menu">
-          <li>
-            <a href="./index.html">VOLTAR</a>
-          </li>
+          <li><a href="./historia.html">HISTÓRIA</a></li>
+          <li><a href="./src/demo-game/index.html">DEMO GAMES</a></li>
+          <li><a href="./index.html">VOLTAR</a></li>
         </ul>
       </nav>
     </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
-      <main class="container">
-      <div class="informacoes">
-        <img
-          class="imagem-titulo"
-          src="./src/imagens/titulo.png"
-          alt="imagem do título do filme"
-        />
-        <p class="descricao-historia" align="justify" id="descricao1">
-          A Atari foi fundada em 1972 por Nolan Bushnell e Ted Dabney e foi uma das primeiras empresas a popularizar e difundir jogos em todo o mundo. A marca alcançou sucesso com o lançamento de Pong para fliperamas e alcançou sua revolução em 1977, quando lançou o VCS (Video Computer System), conhecido como Atari 2600, projetado por Jay Miner. Este console chegou ao Brasil em 1983 e se tornou um sucesso de vendas entre 1984 e 1986, e seus jogos ainda são lembrados por muitos que viveram sua juventude naquela época.
-        </p>
 
-      </div>
-      <img class="atari" src="./src/imagens/criadores.png" alt="O fiel" />
-    </div>
-    <div id="secao-02" class="secao">
-      <header class="cabecalho">
-      <a href="/">
-        <img class="logo" src="./src/imagens/logo-atari.png" alt="logo atari" />
-      </a>
-      <nav>
-        <ul class="menu">
-          <li>
-            <a href="./index.html">VOLTAR</a>
-          </li>
+    <!-- ============================== ABERTURA ============================== -->
+    <section class="hw-hero">
+      <div class="hw-hero-texto">
+        <img class="imagem-titulo" src="./src/imagens/titulo.png" alt="Atari 2600" />
+        <h1 class="hw-subtitulo">Hardware</h1>
+        <p class="hw-descricao">
+          Por fora, uma caixa de madeira com seis chaves. Por dentro, uma placa
+          com apenas três chips principais, 128 bytes de memória e nenhuma
+          memória de vídeo. Ainda assim, ele rodou centenas de jogos. Abra o
+          console e veja como cada peça funciona.
+        </p>
+        <ul class="hw-numeros">
+          <li><strong>1,19 MHz</strong><span>processador</span></li>
+          <li><strong>128 bytes</strong><span>de RAM</span></li>
+          <li><strong>4 KB</strong><span>por cartucho</span></li>
+          <li><strong>128</strong><span>cores (NTSC)</span></li>
         </ul>
-      </nav>
-    </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
-      <main class="container">
-      <div class="informacoes">
-          <img
-          class="imagem-titulo"
-          src="./src/imagens/titulo.png"
-          alt="imagem do título do filme"
-        />
-        <p class="descricao-historia" align="justify" id="descricao2">
-          Em 1973, a Atari adquiriu a Cyan Engineering, uma empresa especializada em desenvolvimento de jogos e começou a trabalhar em um sistema de video game avançado, chamado "Stella". A diferença entre ele e as máquinas anteriores é que ele usava uma CPU completa, o MOS Technology 6502, em vez de lógica de programação fixa para rodar um grande número de jogos. Ele também incluía chips de RAM e E/S, MOS Technology 6532, um chip de display e som próprio, chamado TIA, para melhorar a experiência de jogo
-        </p>
-
+        <nav class="hw-atalhos" aria-label="Seções da página">
+          <a class="botao" href="#placa">A placa</a>
+          <a class="botao botao-contorno" href="#chips">Os chips</a>
+          <a class="botao botao-contorno" href="#feixe">Como desenha</a>
+          <a class="botao botao-contorno" href="#ficha">Ficha técnica</a>
+        </nav>
       </div>
-      <img class="atari" src="./src/imagens/composicao6502.png" alt="O fiel" />
-    </div>
-    </div>
-    <div id="secao-03" class="secao">
-      <header class="cabecalho">
-      <a href="/">
-        <img class="logo" src="./src/imagens/logo-atari.png" alt="logo atari" />
-      </a>
-      <nav>
-        <ul class="menu">
-          <li>
-            <a href="./index.html">VOLTAR</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
-  
-      <main class="container">
-      <div class="informacoes">
-          <img
-          class="imagem-titulo"
-          src="./src/imagens/titulo.png"
-          alt="imagem do título do filme"
-        />
-        <p class="descricao-historia" align=justify id="descricao3">
-          A equipe de desenvolvimento estava trabalhando arduamente para lançar seu produto antes de concorrentes. Eles contrataram Jay Miner, um especialista em chips, que conseguiu condensar vários circuitos em um único chip, tornando o TIA único. Após testes, o sistema estava pronto para ser vendido e foi lançado em 1977, custando cerca de 100 milhões de dólares. O preço inicial foi de 199 dólares, incluindo 9 jogos, e foi um sucesso comercial.
-        </p>
+      <img class="hw-hero-console" src="./src/imagens/atari.png" alt="Atari 2600 com acabamento em madeira" />
+    </section>
 
-      </div>
-      <img class="atari" src="./src/imagens/imagem2600.png" alt="O fiel" />
-    </div>
-    
-    <div id="secao-04" class="secao">
-       <header class="cabecalho">
-      <a href="/">
-        <img class="logo" src="./src/imagens/logo-atari.png" alt="logo atari" />
-      </a>
-      <nav>
-        <ul class="menu">
-          <li>
-            <a href="./index.html">VOLTAR</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-      <span class="icone-scroll">
-        <span class="scroll-next scroll"></span>
-      </span>
-      <main class="container">
-      <div class="informacoes">
-          <img
-          class="imagem-titulo"
-          src="./src/imagens/titulo.png"
-          alt="imagem do título do filme"
-        />
-        <p class="descricao-historia" align=justify id="descricao4">
-          A Atari lançou o 2600 em 1979, tornando-se um sucesso com milhões de unidades vendidas e o jogo Space Invaders aumentando ainda mais a popularidade, levando à venda de mais de 8 milhões de unidades em 1982. O 2600 se tornou um ícone da indústria de jogos.
-        </p>
+    <main class="hw">
+      <!-- ============================== PLACA ============================== -->
+      <section class="hw-secao" id="placa">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">01</span>
+          <div>
+            <h2>A placa por dentro</h2>
+            <p>
+              Clique (ou toque) em cada componente para ver o que ele faz. A
+              ilustração representa a placa-mãe do 2600 de forma simplificada:
+              as posições não estão em escala, mas todas as peças existem no
+              console original.
+            </p>
+          </div>
+        </header>
 
-      </div>
-      <img class="atari" src="./src/imagens/ataricaixa.png" alt="O fiel" />
+        <div class="placa-area">
+          <div class="placa-moldura">
+            <div class="placa-svg" id="placa-svg" role="group" aria-label="Placa-mãe interativa do Atari 2600"></div>
+            <label class="placa-opcao">
+              <input type="checkbox" id="mostrar-trilhas" checked />
+              Destacar o barramento (trilhas que ligam a CPU aos outros chips)
+            </label>
+          </div>
 
-    </div>
-    <div id="secao-05" class="secao">
-      <header class="cabecalho">
-      <a href="/">
-        <img class="logo" src="./src/imagens/logo-atari.png" alt="logo atari" />
-      </a>
-      <nav>
-        <ul class="menu">
-          <li>
-            <a href="./index.html">VOLTAR</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-      <span class="icone-scroll">
-        <span class="scroll-top scroll"></span>
-        <span class="scroll-top scroll"></span>
-      </span>
-      <main class="container">
-      <div class="informacoes">
-          <img
-          class="imagem-titulo"
-          src="./src/imagens/titulo.png"
-          alt="imagem do título do filme"
-        />
-        <p class="descricao-historia" align=justify id="descricao5">
-          A Atari foi uma empresa de jogos de sucesso com o lançamento do Atari 2600, mas enfrentou problemas com projetos ruins e insatisfação dos funcionários. Desenvolvedores de jogos saíram da empresa para fundar suas próprias e a Activision superou a Atari em popularidade. A popularidade dos jogos decaiu no final dos anos 80 com o surgimento de computadores melhores. Apesar dos obstáculos, o Atari 2600 foi importante para o avanço tecnológico e marcou a memória de muitos jovens na época.
-        </p>
+          <aside class="placa-painel" id="placa-painel" aria-live="polite">
+            <span class="painel-tag" id="painel-tag">Comece por aqui</span>
+            <h3 id="painel-titulo">Escolha um componente</h3>
+            <p class="painel-texto" id="painel-texto">
+              Os números vermelhos marcam as peças. Os três chips grandes no
+              centro são o coração do console: o processador <strong>6507</strong>,
+              o chip de vídeo e som <strong>TIA</strong> e o <strong>RIOT 6532</strong>,
+              que guarda a memória e lê os controles.
+            </p>
+            <dl class="painel-specs" id="painel-specs"></dl>
+            <p class="painel-curiosidade" id="painel-curiosidade" hidden></p>
+          </aside>
+        </div>
 
-      </div>
-      <img class="atari" src="./src/imagens/alllinhas.png" alt="O fiel" />
-   
-    </div>
+        <ol class="placa-lista" id="placa-lista" aria-label="Lista de componentes"></ol>
+      </section>
+
+      <!-- ============================== CHIPS ============================== -->
+      <section class="hw-secao" id="chips">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">02</span>
+          <div>
+            <h2>Os três chips que fazem tudo</h2>
+            <p>
+              O projeto, apelidado de <em>Stella</em>, nasceu na Cyan Engineering
+              com a ideia de Steve Mayer e Ron Milner. Jay Miner e Joe Decuir
+              transformaram o protótipo em um console barato o suficiente para
+              chegar às lojas por US$ 199.
+            </p>
+          </div>
+        </header>
+
+        <div class="chips">
+          <article class="chip-card">
+            <div class="chip-desenho" aria-hidden="true">
+              <span class="chip-corpo"><b>MOS</b> 6507</span>
+              <span class="chip-pinos">28 pinos</span>
+            </div>
+            <h3>MOS 6507 — o processador</h3>
+            <p>
+              Uma versão econômica do famoso 6502 (o mesmo do Apple II e do NES),
+              em um encapsulamento menor. Ele executa o programa do cartucho e
+              comanda os outros chips escrevendo e lendo endereços de memória.
+            </p>
+            <ul class="chip-lista">
+              <li><b>Clock:</b> 1,19 MHz (cristal de 3,58 MHz dividido por 3)</li>
+              <li><b>Dados:</b> 8 bits · <b>Endereços:</b> 13 linhas = 8 KB</li>
+              <li><b>Sem interrupções:</b> os pinos IRQ e NMI foram removidos</li>
+              <li><b>Registradores:</b> A, X, Y, pilha (S), status (P) e PC</li>
+              <li><b>Conjunto de instruções:</b> idêntico ao do 6502 (56 instruções)</li>
+            </ul>
+            <p class="chip-nota">
+              Cortar pinos deixou o chip mais barato, mas limitou o console a
+              8 KB de espaço: só 4 KB ficaram para o cartucho.
+            </p>
+          </article>
+
+          <article class="chip-card chip-destaque">
+            <div class="chip-desenho" aria-hidden="true">
+              <span class="chip-corpo"><b>TIA</b> CO10444</span>
+              <span class="chip-pinos">40 pinos</span>
+            </div>
+            <h3>TIA — vídeo, som e botões</h3>
+            <p>
+              O <em>Television Interface Adaptor</em> foi desenhado sob medida por
+              Jay Miner. Ele gera o sinal de TV, os dois canais de som e lê os
+              botões de tiro e os paddles. Não existe memória de vídeo: o TIA só
+              sabe o que desenhar na linha atual.
+            </p>
+            <ul class="chip-lista">
+              <li><b>Resolução:</b> 160 pixels por linha, 192 linhas visíveis (NTSC)</li>
+              <li><b>Objetos:</b> playfield, 2 jogadores, 2 mísseis e 1 bola</li>
+              <li><b>Colisões:</b> detectadas no próprio hardware, pixel a pixel</li>
+              <li><b>Som:</b> 2 canais com frequência, forma de onda e volume</li>
+              <li><b>WSYNC:</b> registrador que pausa a CPU até a próxima linha</li>
+            </ul>
+            <p class="chip-nota">
+              É o TIA que divide o clock do cristal por 3 e o entrega à CPU:
+              3 pixels desenhados para cada ciclo de processador.
+            </p>
+          </article>
+
+          <article class="chip-card">
+            <div class="chip-desenho" aria-hidden="true">
+              <span class="chip-corpo"><b>MOS</b> 6532</span>
+              <span class="chip-pinos">40 pinos</span>
+            </div>
+            <h3>RIOT 6532 — memória e controles</h3>
+            <p>
+              O nome vem de <em>RAM–I/O–Timer</em>: três funções em um chip só. Ele
+              guarda toda a memória de trabalho do console, lê os joysticks e as
+              chaves do painel e oferece um temporizador programável.
+            </p>
+            <ul class="chip-lista">
+              <li><b>RAM:</b> 128 bytes — toda a memória do console</li>
+              <li><b>Porta A (SWCHA):</b> direções dos dois joysticks</li>
+              <li><b>Porta B (SWCHB):</b> Reset, Select, TV Type e Difficulty</li>
+              <li><b>Timer:</b> conta em passos de 1, 8, 64 ou 1024 ciclos</li>
+              <li><b>Pilha:</b> divide os mesmos 128 bytes com as variáveis do jogo</li>
+            </ul>
+            <p class="chip-nota">
+              Os jogos usam o timer para "contar o tempo" do intervalo vertical
+              enquanto rodam a lógica do jogo, sem perder a sincronia da TV.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================== ARQUITETURA ============================== -->
+      <section class="hw-secao" id="arquitetura">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">03</span>
+          <div>
+            <h2>Como as peças conversam</h2>
+            <p>
+              Tudo passa por dois barramentos: 13 fios de endereço (onde ler ou
+              escrever) e 8 fios de dados (o valor). Avance pelos passos para
+              acompanhar um quadro de jogo.
+            </p>
+          </div>
+        </header>
+
+        <div class="arq">
+          <div class="arq-diagrama">
+            <svg viewBox="0 0 900 460" id="arq-svg" role="img" aria-label="Diagrama de blocos do Atari 2600">
+              <defs>
+                <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="currentColor" />
+                </marker>
+              </defs>
+
+              <!-- barramentos -->
+              <g class="arq-item" data-arq="barramento">
+                <rect x="60" y="196" width="780" height="14" rx="3" class="arq-bus" />
+                <rect x="60" y="222" width="780" height="10" rx="3" class="arq-bus arq-bus-dados" />
+                <text x="450" y="190" class="arq-rotulo-bus">BARRAMENTO DE ENDEREÇOS · 13 BITS (A0–A12)</text>
+                <text x="450" y="248" class="arq-rotulo-bus">BARRAMENTO DE DADOS · 8 BITS (D0–D7)</text>
+              </g>
+
+              <!-- cartucho -->
+              <g class="arq-item" data-arq="cartucho">
+                <rect x="360" y="40" width="180" height="90" rx="8" class="arq-caixa" />
+                <text x="450" y="78" class="arq-titulo">CARTUCHO</text>
+                <text x="450" y="100" class="arq-sub">ROM 2–4 KB</text>
+                <line x1="450" y1="130" x2="450" y2="194" class="arq-linha" />
+              </g>
+
+              <!-- CPU -->
+              <g class="arq-item" data-arq="cpu">
+                <rect x="60" y="290" width="200" height="100" rx="8" class="arq-caixa arq-caixa-cpu" />
+                <text x="160" y="332" class="arq-titulo">CPU 6507</text>
+                <text x="160" y="356" class="arq-sub">1,19 MHz · 8 bits</text>
+                <line x1="160" y1="290" x2="160" y2="234" class="arq-linha" />
+              </g>
+
+              <!-- TIA -->
+              <g class="arq-item" data-arq="tia">
+                <rect x="350" y="290" width="200" height="100" rx="8" class="arq-caixa arq-caixa-tia" />
+                <text x="450" y="332" class="arq-titulo">TIA</text>
+                <text x="450" y="356" class="arq-sub">vídeo · som · botões</text>
+                <line x1="450" y1="290" x2="450" y2="234" class="arq-linha" />
+              </g>
+
+              <!-- RIOT -->
+              <g class="arq-item" data-arq="riot">
+                <rect x="640" y="290" width="200" height="100" rx="8" class="arq-caixa arq-caixa-riot" />
+                <text x="740" y="332" class="arq-titulo">RIOT 6532</text>
+                <text x="740" y="356" class="arq-sub">128 B RAM · E/S · timer</text>
+                <line x1="740" y1="290" x2="740" y2="234" class="arq-linha" />
+              </g>
+
+              <!-- cristal e clock -->
+              <g class="arq-item" data-arq="clock">
+                <rect x="380" y="414" width="140" height="34" rx="17" class="arq-caixa arq-caixa-pequena" />
+                <text x="450" y="436" class="arq-sub arq-claro">cristal 3,58 MHz</text>
+                <line x1="450" y1="414" x2="450" y2="392" class="arq-linha arq-seta" />
+                <path d="M350,370 C300,370 300,370 262,370" class="arq-linha arq-seta" />
+                <text x="306" y="362" class="arq-mini">÷3</text>
+              </g>
+
+              <!-- controles -->
+              <g class="arq-item" data-arq="controles">
+                <rect x="660" y="40" width="200" height="90" rx="8" class="arq-caixa arq-caixa-ext" />
+                <text x="760" y="76" class="arq-titulo">CONTROLES</text>
+                <text x="760" y="98" class="arq-sub">joysticks · chaves</text>
+                <path d="M780,130 L780,288" class="arq-linha arq-seta" />
+                <path d="M700,130 C700,250 560,250 548,288" class="arq-linha arq-seta" />
+                <text x="796" y="168" class="arq-mini arq-esq">direções / painel</text>
+                <text x="612" y="168" class="arq-mini">tiro / paddles</text>
+              </g>
+
+              <!-- saída de TV -->
+              <g class="arq-item" data-arq="tv">
+                <rect x="40" y="40" width="250" height="90" rx="8" class="arq-caixa arq-caixa-ext" />
+                <text x="165" y="76" class="arq-titulo">MODULADOR RF → TV</text>
+                <text x="165" y="98" class="arq-sub">vídeo composto + áudio</text>
+                <path d="M352,320 C300,320 300,150 230,132" class="arq-linha arq-seta arq-video" />
+                <text x="292" y="226" class="arq-mini arq-esq">vídeo + som</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="arq-passos">
+            <div class="arq-passo-topo">
+              <span class="arq-contador" id="arq-contador">Passo 1 de 6</span>
+              <div class="arq-botoes">
+                <button type="button" class="botao-icone" id="arq-anterior" aria-label="Passo anterior">‹</button>
+                <button type="button" class="botao-icone" id="arq-proximo" aria-label="Próximo passo">›</button>
+              </div>
+            </div>
+            <h3 id="arq-titulo"></h3>
+            <p id="arq-texto"></p>
+            <div class="arq-pontos" id="arq-pontos"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== MEMÓRIA ============================== -->
+      <section class="hw-secao" id="memoria">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">04</span>
+          <div>
+            <h2>Mapa de memória</h2>
+            <p>
+              Para a CPU, tudo é endereço. Escrever no endereço $09 muda a cor de
+              fundo da tela; ler o $0280 diz para onde o joystick está apontando.
+              Passe o mouse ou toque em cada faixa.
+            </p>
+          </div>
+        </header>
+
+        <div class="memoria">
+          <div class="mapa" id="mapa">
+            <button type="button" class="mapa-faixa" data-mapa="tia" style="--cor: #e8742c">
+              <span class="mapa-endereco">$0000–$007F</span>
+              <span class="mapa-nome">Registradores do TIA</span>
+              <span class="mapa-tamanho">128 endereços</span>
+            </button>
+            <button type="button" class="mapa-faixa" data-mapa="ram" style="--cor: #48a848">
+              <span class="mapa-endereco">$0080–$00FF</span>
+              <span class="mapa-nome">RAM (RIOT)</span>
+              <span class="mapa-tamanho">128 bytes</span>
+            </button>
+            <button type="button" class="mapa-faixa" data-mapa="io" style="--cor: #5a8ae8">
+              <span class="mapa-endereco">$0280–$0297</span>
+              <span class="mapa-nome">Portas e timer (RIOT)</span>
+              <span class="mapa-tamanho">E/S</span>
+            </button>
+            <div class="mapa-faixa mapa-vazio" aria-hidden="true">
+              <span class="mapa-nome">… espelhos dos mesmos chips …</span>
+            </div>
+            <button type="button" class="mapa-faixa mapa-grande" data-mapa="rom" style="--cor: #ff0021">
+              <span class="mapa-endereco">$1000–$1FFF</span>
+              <span class="mapa-nome">Cartucho (ROM)</span>
+              <span class="mapa-tamanho">4 KB</span>
+            </button>
+          </div>
+
+          <div class="memoria-detalhe">
+            <h3 id="mapa-titulo">Registradores do TIA</h3>
+            <p id="mapa-texto"></p>
+
+            <div class="ram">
+              <div class="ram-cabecalho">
+                <h4>Toda a RAM do Atari 2600</h4>
+                <span>128 bytes · 16 × 8</span>
+              </div>
+              <div class="ram-grade" id="ram-grade" aria-hidden="true"></div>
+              <p class="ram-legenda">
+                Uma foto de celular de 3 MB ocupa o mesmo espaço que a RAM de
+                mais de <strong>23 mil</strong> Ataris. Cada quadradinho acima é um
+                byte: posição do jogador, pontuação, vidas e até a pilha da CPU
+                precisam caber aqui.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== FEIXE ============================== -->
+      <section class="hw-secao" id="feixe">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">05</span>
+          <div>
+            <h2>Correndo contra o feixe</h2>
+            <p>
+              Sem memória de vídeo, o Atari desenha a tela junto com a TV. O feixe
+              de elétrons do tubo varre a tela linha por linha, e a CPU precisa
+              reprogramar o TIA a tempo para cada uma delas. Os programadores
+              chamavam isso de <em>racing the beam</em>.
+            </p>
+          </div>
+        </header>
+
+        <div class="feixe">
+          <div class="feixe-tela-area">
+            <div class="feixe-tela">
+              <canvas id="feixe-canvas" width="228" height="262" aria-label="Animação do feixe desenhando a tela"></canvas>
+              <span class="feixe-zona feixe-zona-vsync">VSYNC · 3 linhas</span>
+              <span class="feixe-zona feixe-zona-vblank">VBLANK · 37 linhas</span>
+              <span class="feixe-zona feixe-zona-visivel">ÁREA VISÍVEL · 192 linhas</span>
+              <span class="feixe-zona feixe-zona-overscan">OVERSCAN · 30 linhas</span>
+              <span class="feixe-zona feixe-zona-hblank">HBLANK<br />68 clocks</span>
+            </div>
+            <div class="feixe-controles">
+              <button type="button" class="botao" id="feixe-play">Pausar</button>
+              <label class="feixe-velocidade">
+                Velocidade
+                <input type="range" id="feixe-vel" min="0" max="5" step="1" value="2" />
+                <span id="feixe-vel-rotulo">linha a linha</span>
+              </label>
+            </div>
+            <fieldset class="feixe-objetos">
+              <legend>Objetos do TIA — ligue e desligue</legend>
+              <label><input type="checkbox" data-obj="fundo" checked /> <i style="--c:#5a8ae8"></i> Fundo (COLUBK)</label>
+              <label><input type="checkbox" data-obj="playfield" checked /> <i style="--c:#48a848"></i> Playfield (PF0–PF2)</label>
+              <label><input type="checkbox" data-obj="p0" checked /> <i style="--c:#f0e050"></i> Jogador 0 (GRP0)</label>
+              <label><input type="checkbox" data-obj="p1" checked /> <i style="--c:#e85ad8"></i> Jogador 1 (GRP1)</label>
+              <label><input type="checkbox" data-obj="missil" checked /> <i style="--c:#ffffff"></i> Mísseis (ENAM0/1)</label>
+              <label><input type="checkbox" data-obj="bola" checked /> <i style="--c:#ff0021"></i> Bola (ENABL)</label>
+            </fieldset>
+          </div>
+
+          <div class="feixe-info">
+            <div class="feixe-contadores">
+              <div><span>Linha</span><strong id="feixe-linha">0</strong><small>de 262</small></div>
+              <div><span>Ciclo da CPU</span><strong id="feixe-ciclo">0</strong><small>de 76 por linha</small></div>
+              <div><span>Região</span><strong id="feixe-regiao">VSYNC</strong><small id="feixe-regiao-sub">sincronismo</small></div>
+            </div>
+            <pre class="feixe-codigo" id="feixe-codigo" aria-label="Código assembly 6502 sendo executado"></pre>
+            <p class="feixe-explica" id="feixe-explica"></p>
+            <ul class="feixe-fatos">
+              <li><b>262 linhas</b> por quadro, <b>60 quadros</b> por segundo (NTSC)</li>
+              <li><b>228 clocks de cor</b> por linha: 68 de apagamento + 160 pixels visíveis</li>
+              <li><b>76 ciclos de CPU</b> por linha — é todo o tempo que o código tem</li>
+              <li>O playfield tem só <b>40 blocos</b> por linha; a metade direita repete ou espelha a esquerda</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CORES ============================== -->
+      <section class="hw-secao" id="cores">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">06</span>
+          <div>
+            <h2>Vídeo e as 128 cores</h2>
+            <p>
+              O TIA não gera RGB. Ele entrega separadamente o sincronismo, 3 bits
+              de luminância (8 níveis de brilho) e a cor, que é um atraso de fase
+              da subportadora de 3,58 MHz (16 matizes). Um conjunto de resistores
+              e transistores na placa mistura tudo em vídeo composto, e o
+              modulador transforma isso em um canal de TV.
+            </p>
+          </div>
+        </header>
+
+        <div class="cores">
+          <div class="paleta" id="paleta" role="grid" aria-label="Paleta NTSC de 128 cores"></div>
+          <div class="cores-info">
+            <div class="cor-amostra" id="cor-amostra"></div>
+            <dl class="cor-dados">
+              <div><dt>Valor no registrador</dt><dd id="cor-valor">$00</dd></div>
+              <div><dt>Matiz (4 bits altos)</dt><dd id="cor-matiz">0</dd></div>
+              <div><dt>Luminância (bits 1–3)</dt><dd id="cor-lum">0</dd></div>
+              <div><dt>Cor aproximada</dt><dd id="cor-hex">#000000</dd></div>
+            </dl>
+            <p class="cores-nota">
+              Para pintar o fundo, o jogo faz <code>LDA #$<span id="cor-codigo">00</span></code> e
+              <code>STA COLUBK</code>. Na versão PAL o mesmo console mostra 104 cores, e na
+              SECAM apenas 8. As cores acima são a aproximação usada pelos emuladores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== SOM ============================== -->
+      <section class="hw-secao" id="som">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">07</span>
+          <div>
+            <h2>O som do TIA</h2>
+            <p>
+              Dois canais, cada um controlado por apenas três registradores. A
+              frequência vem de dividir um clock de cerca de 31,4 kHz por um número
+              de 1 a 32 — por isso as músicas do Atari soam "desafinadas": nem toda
+              nota existe.
+            </p>
+          </div>
+        </header>
+
+        <div class="som">
+          <div class="som-painel">
+            <div class="som-registro">
+              <label for="som-audc">AUDC0 <small>forma de onda (4 bits)</small></label>
+              <select id="som-audc">
+                <option value="4">4 — tom puro (onda quadrada, ÷2)</option>
+                <option value="12" selected>12 — tom puro grave (÷6)</option>
+                <option value="1">1 — zumbido (polinômio de 4 bits)</option>
+                <option value="6">6 — tom "rasgado" (÷31)</option>
+                <option value="8">8 — ruído branco (polinômio de 9 bits)</option>
+                <option value="15">15 — ruído grave de 5 bits (motores)</option>
+              </select>
+            </div>
+            <div class="som-registro">
+              <label for="som-audf">AUDF0 <small>divisor de frequência (5 bits)</small> <b id="som-audf-valor">20</b></label>
+              <input type="range" id="som-audf" min="0" max="31" value="20" />
+            </div>
+            <div class="som-registro">
+              <label for="som-audv">AUDV0 <small>volume (4 bits)</small> <b id="som-audv-valor">6</b></label>
+              <input type="range" id="som-audv" min="0" max="15" value="6" />
+            </div>
+            <div class="som-acoes">
+              <button type="button" class="botao" id="som-tocar">Tocar</button>
+              <span class="som-freq">≈ <b id="som-freq">0</b> Hz</span>
+            </div>
+          </div>
+          <div class="som-texto">
+            <h3>Como o som é gerado</h3>
+            <p>
+              Cada canal tem um divisor (AUDF) que "pula" pulsos do clock de áudio
+              e um circuito de deslocamento com realimentação — um
+              <em>polinômio</em> — que embaralha os bits (AUDC). Algumas
+              combinações geram ondas quadradas limpas, outras geram ruído, perfeito
+              para explosões e motores.
+            </p>
+            <p>
+              O volume (AUDV) tem 16 níveis. A saída dos dois canais é somada e vai
+              junto com o vídeo para o modulador de RF, por isso o som sai pelo
+              alto-falante da TV.
+            </p>
+            <p class="som-aviso">Abaixe o volume antes de tocar — o Atari não era nada discreto.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CONTROLES ============================== -->
+      <section class="hw-secao" id="controles">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">08</span>
+          <div>
+            <h2>Joystick, paddles e chaves</h2>
+            <p>
+              O joystick CX40 é só cinco interruptores. Cada direção fecha um
+              contato e leva um bit da porta A do RIOT a zero; o botão vai para
+              uma entrada do TIA. Pressione o joystick abaixo (ou use as setas e o
+              Espaço) e veja os bits mudarem.
+            </p>
+          </div>
+        </header>
+
+        <div class="controles">
+          <div class="joystick" id="joystick" tabindex="0" aria-label="Joystick interativo: use as setas e o Espaço">
+            <div class="joy-base">
+              <button type="button" class="joy-dir joy-cima" data-dir="cima" aria-label="Cima">▲</button>
+              <button type="button" class="joy-dir joy-esq" data-dir="esq" aria-label="Esquerda">◀</button>
+              <span class="joy-alavanca" id="joy-alavanca"></span>
+              <button type="button" class="joy-dir joy-dir-d" data-dir="dir" aria-label="Direita">▶</button>
+              <button type="button" class="joy-dir joy-baixo" data-dir="baixo" aria-label="Baixo">▼</button>
+            </div>
+            <button type="button" class="joy-tiro" data-dir="tiro" aria-label="Botão de tiro">TIRO</button>
+          </div>
+
+          <div class="bits">
+            <div class="bits-registro">
+              <div class="bits-nome"><b>SWCHA</b> · $0280 · porta A do RIOT</div>
+              <div class="bits-linha" id="bits-swcha"></div>
+              <div class="bits-legenda">
+                <span>direita</span><span>esquerda</span><span>baixo</span><span>cima</span>
+                <span class="bits-p1" title="Joystick do jogador 2">← jogador 2 →</span>
+              </div>
+            </div>
+            <div class="bits-registro">
+              <div class="bits-nome"><b>INPT4</b> · $0C · entrada do TIA</div>
+              <div class="bits-linha" id="bits-inpt4"></div>
+              <div class="bits-legenda"><span>tiro</span></div>
+            </div>
+            <p class="bits-explica" id="bits-explica">
+              Repare que a lógica é invertida: <b>1</b> significa solto e
+              <b>0</b> significa pressionado. Isso acontece porque cada fio fica
+              em 5 V por um resistor e o interruptor o liga ao terra.
+            </p>
+          </div>
+
+          <div class="controles-cards">
+            <article>
+              <h4>Conector DB-9</h4>
+              <p>
+                Pinos: 1 cima · 2 baixo · 3 esquerda · 4 direita · 5 paddle B ·
+                6 tiro · 7 +5 V · 8 terra · 9 paddle A. O mesmo conector servia
+                para joysticks, paddles, teclados e volantes.
+              </p>
+            </article>
+            <article>
+              <h4>Paddles</h4>
+              <p>
+                Cada paddle é um potenciômetro de 1 MΩ. O TIA descarrega um
+                capacitor e mede quanto tempo ele leva para carregar de novo:
+                quanto mais girado, mais demorado. O jogo conta as linhas até a
+                entrada mudar.
+              </p>
+            </article>
+            <article>
+              <h4>Chaves do painel</h4>
+              <p>
+                Reset, Select, TV Type (cor ou preto e branco) e as duas
+                Difficulty (A/B) são lidas pela porta B do RIOT. Elas não fazem
+                nada sozinhas: cada jogo decide o que cada chave significa.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== VERSÕES ============================== -->
+      <section class="hw-secao" id="versoes">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">09</span>
+          <div>
+            <h2>As versões do console</h2>
+            <p>
+              Ao longo de 15 anos de vendas, a carcaça mudou várias vezes, mas o
+              coração continuou o mesmo: 6507, TIA e RIOT.
+            </p>
+          </div>
+        </header>
+
+        <ol class="linha-tempo">
+          <li><span class="ano">1977</span><h4>"Heavy Sixer"</h4><p>Primeira versão, com seis chaves na frente e carcaça de plástico grosso. Lançada nos EUA em setembro de 1977.</p></li>
+          <li><span class="ano">1978</span><h4>"Light Sixer"</h4><p>Mantém as seis chaves com uma carcaça mais leve e barata de produzir.</p></li>
+          <li><span class="ano">1980</span><h4>Quatro chaves</h4><p>As chaves de dificuldade vão para a parte de trás e ficam quatro na frente.</p></li>
+          <li><span class="ano">1982</span><h4>"Darth Vader"</h4><p>Todo preto, sem madeira. Neste ano o VCS passa a se chamar oficialmente Atari 2600.</p></li>
+          <li><span class="ano">1983</span><h4>Chegada ao Brasil</h4><p>O console é lançado oficialmente no Brasil e vira febre entre 1984 e 1986.</p></li>
+          <li><span class="ano">1986</span><h4>2600 Jr.</h4><p>Versão compacta e barata, vendida até a descontinuação oficial, em 1992.</p></li>
+        </ol>
+      </section>
+
+      <!-- ============================== FICHA ============================== -->
+      <section class="hw-secao" id="ficha">
+        <header class="hw-cabecalho-secao">
+          <span class="hw-numero-secao">10</span>
+          <div>
+            <h2>Ficha técnica</h2>
+            <p>Os números do Atari 2600 (versão NTSC, a original americana).</p>
+          </div>
+        </header>
+
+        <dl class="ficha">
+          <div><dt>Processador</dt><dd>MOS 6507 · 8 bits · 1,19 MHz</dd></div>
+          <div><dt>Vídeo</dt><dd>TIA · 160 × 192 pixels · 128 cores (NTSC), 104 (PAL), 8 (SECAM)</dd></div>
+          <div><dt>Objetos de vídeo</dt><dd>Playfield, 2 jogadores, 2 mísseis e 1 bola, com colisão por hardware</dd></div>
+          <div><dt>Som</dt><dd>TIA · 2 canais · 32 frequências · 16 formas de onda · 16 volumes</dd></div>
+          <div><dt>RAM</dt><dd>128 bytes (no RIOT 6532)</dd></div>
+          <div><dt>Memória de vídeo</dt><dd>Nenhuma — o quadro é desenhado em tempo real</dd></div>
+          <div><dt>Cartucho</dt><dd>ROM de 2 ou 4 KB; jogos maiores usam troca de bancos (bank switching)</dd></div>
+          <div><dt>Entradas</dt><dd>2 portas DB-9 · 6 chaves no painel (4 nos modelos posteriores)</dd></div>
+          <div><dt>Saída</dt><dd>RF, canal 2 ou 3 (VHF)</dd></div>
+          <div><dt>Alimentação</dt><dd>Fonte externa de 9 V DC, regulada para 5 V na placa</dd></div>
+          <div><dt>Lançamento</dt><dd>11 de setembro de 1977 (EUA) · US$ 199</dd></div>
+          <div><dt>Fim da produção</dt><dd>1992</dd></div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="rodape-hw">
+      <p>
+        Ilustrações e animações feitas em código para esta página. Atari e os
+        nomes dos produtos pertencem aos seus respectivos donos.
+      </p>
+    </footer>
+
+    <script src="./src/js/hardware.js"></script>
   </body>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script>
-   
-    var _AlturaDocumento = $(window).height(); //pega altura da janela
-
-    function AlturaSecao() {
-      $('.secao').height(_AlturaDocumento); //atribui o valor da variável a todas as divs com a classe secao
-    }
-
-    function ScrollSecao() {
-      console.log('entrou');
-      var body = $('html, body');
-      if ($(this).parent('.secao').is('#secao-01')) {
-        //verifica se está na primeira seção e rola para a segunda
-        body.animate({ scrollTop: _AlturaDocumento }, '500');
-      } else if ($(this).parent('.secao').is('#secao-02')) {
-        //verifica se está na segunda seção e rola para a terceira
-        body.animate({ scrollTop: _AlturaDocumento * 2 }, '500');
-      } else if ($(this).parent('.secao').is('#secao-03')) {
-        //verifica se está na terceira seção e rola para a quarta
-        body.animate({ scrollTop: _AlturaDocumento * 3 }, '500');
-      } else if ($(this).parent('.secao').is('#secao-04')){
-        //verifica se está na terceira seção e rola para a quinta
-        body.animate({ scrollTop: _AlturaDocumento * 4 }, '500');
-      }else {
-        //rola para o início da página
-        body.animate({ scrollTop: 0}, '500');
-      }
-    }
-    $('.icone-scroll').click(ScrollSecao); //chama a função na ação de click no ícone
-
-    $(AlturaSecao); //chama a função só depois que o documento estiver completamente carregado
-  </script>
 </html>

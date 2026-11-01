@@ -54,7 +54,17 @@ O 2600 foi um console revolucionário que levou a emoção dos fliperamas para d
 
 _O hardware por trás do 2600_
 
-O 2600 era muito mais do que um console de jogos: era um hardware engenhoso, que combinava circuitos e controles inovadores para entregar uma experiência de jogo sem igual na época. Esta seção da página explora o hardware por trás do 2600 e as inovações tecnológicas que o tornaram possível — dos circuitos integrados aos controles. O 2600 ampliou os limites do que era possível nos videogames domésticos.
+O 2600 era muito mais do que um console de jogos: era um hardware engenhoso, que combinava circuitos e controles inovadores para entregar uma experiência de jogo sem igual na época. A página **Hardware** abre o console e explica, de forma interativa:
+
+- **A placa por dentro** — ilustração da placa-mãe em que cada componente é clicável: processador 6507, TIA, RIOT 6532, conector do cartucho, cristal de 3,58 MHz, mixer de vídeo, modulador de RF, regulador 7805, portas DB-9, chaves do painel e capacitores;
+- **Os três chips** — o que fazem o 6507, o TIA e o RIOT;
+- **Arquitetura** — diagrama de blocos com passo a passo de um quadro de jogo;
+- **Mapa de memória** — os 8 KB endereçáveis e os 128 bytes de RAM animados;
+- **Correndo contra o feixe** — animação do feixe da TV desenhando a tela linha por linha, com o código assembly executado em cada momento e os objetos do TIA que podem ser ligados e desligados;
+- **Vídeo, som e controles** — paleta de 128 cores, gerador de som que simula os registradores do TIA e joystick que mostra os bits lidos pelo console;
+- **Versões do console e ficha técnica**.
+
+Toda a parte gráfica (placa, diagramas e animações) é desenhada em código: SVG e Canvas, sem imagens externas.
 
 ## :video_game: Demo Games
 
