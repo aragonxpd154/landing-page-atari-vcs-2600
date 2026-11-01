@@ -4,7 +4,7 @@
 
 <h4 align="center">
 
-The Atari 2600 was a groundbreaking gaming console that took the world by storm in the late 1970s and early 1980s. This interactive and responsive webpage showcases the history of the Atari 2600, from its initial success to the end of its project. The webpage also includes a section on the hardware used in the construction of the 2600, including the circuits and controllers of the time
+O Atari 2600 foi um console revolucionário que conquistou o mundo no fim dos anos 1970 e início dos anos 1980. Esta página interativa e responsiva apresenta a história do Atari 2600, do sucesso inicial ao fim do projeto, uma seção sobre o hardware usado na construção do console — circuitos e controles da época — e uma página com jogos clássicos para jogar direto no navegador.
 <br>
 <br>
 <a href="https://aragonxpd154.github.io/landing-page-atari-vcs-2600/">
@@ -14,85 +14,85 @@ The Atari 2600 was a groundbreaking gaming console that took the world by storm 
 </h4>
 
 <p align="center">
-<img alt="Github top language" src="https://img.shields.io/github/languages/top/aragonxpd154/landing-page-atari-vcs-2600">
-<img alt="Github laguage count" src="https://img.shields.io/github/languages/count/aragonxpd154/landing-page-atari-vcs-2600">
-<img alt="Repository size" src="https://img.shields.io/github/repo-size/aragonxpd154/landing-page-atari-vcs-2600">
-<img alt="Github last commit" src="https://img.shields.io/github/last-commit/aragonxpd154/landing-page-atari-vcs-2600">
+<img alt="Linguagem principal" src="https://img.shields.io/github/languages/top/aragonxpd154/landing-page-atari-vcs-2600">
+<img alt="Quantidade de linguagens" src="https://img.shields.io/github/languages/count/aragonxpd154/landing-page-atari-vcs-2600">
+<img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/aragonxpd154/landing-page-atari-vcs-2600">
+<img alt="Último commit" src="https://img.shields.io/github/last-commit/aragonxpd154/landing-page-atari-vcs-2600">
 <a href="https://github.com/aragonxpd154/landing-page-atari-vcs-2600/issues">
-<img alt="Repository issues" src="https://img.shields.io/github/issues/aragonxpd154/landing-page-atari-vcs-2600"> 
+<img alt="Issues do repositório" src="https://img.shields.io/github/issues/aragonxpd154/landing-page-atari-vcs-2600">
 </a>
-<img alt="Github license" src="https://img.shields.io/github/license/aragonxpd154/landing-page-atari-vcs-2600">
-</a>
+<img alt="Licença" src="https://img.shields.io/github/license/aragonxpd154/landing-page-atari-vcs-2600">
 </p>
 
 <p align="center">
-<a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#information_source">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#memo-license">License</a>
+<a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#information_source-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#video_game-demo-games">Demo Games</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#memo-licença">Licença</a>
 </p>
 
 <p align="center">
-<img alt="Demo on Photo" src="https://raw.githubusercontent.com/aragonxpd154/landing-page-atari-vcs-2600/main/src/imagens/atari.png">
+<img alt="Foto do Atari 2600" src="https://raw.githubusercontent.com/aragonxpd154/landing-page-atari-vcs-2600/main/src/imagens/atari.png">
 </p>
 
-## :rocket: Technologies
+## :rocket: Tecnologias
 
-This project is still in the development stage and using the following technologies
+O projeto continua em desenvolvimento e usa as seguintes tecnologias:
 
-- HTML5, CSS3 and vanilla JavaScript (Canvas 2D + Web Audio API) — no build step, no dependencies
-- [GoogleAPI Fonts](https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap)
+- HTML5, CSS3 e JavaScript puro (Canvas 2D + Web Audio API) — sem etapa de build e sem dependências
+- [Google Fonts — Poppins](https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap)
 
-## :information_source: About
+## :information_source: Sobre
 
-_The Atari 2600: A Journey Through Gaming History_
+_Atari 2600: uma viagem pela história dos videogames_
 
-The Atari 2600 was a groundbreaking gaming console that took the world by storm in the late 1970s and early 1980s. This interactive and responsive webpage showcases the history of the Atari 2600, from its initial success to the end of its project. The webpage also includes a section on the hardware used in the construction of the 2600, including the circuits and controllers of the time. Finally, the webpage features a Demo Games page with six playable JavaScript remakes of 2600 classics — Pong, Breakout, Space Invaders, Asteroids, Freeway and River Raid — giving users a chance to relive the glory days of the 2600.
+O Atari 2600 foi um console revolucionário que conquistou o mundo no fim dos anos 1970 e início dos anos 1980. Esta página interativa e responsiva mostra a história do Atari 2600, do sucesso inicial ao fim do projeto. Ela também traz uma seção sobre o hardware usado na construção do console, incluindo os circuitos e controles da época. Por fim, a página de Demo Games reúne seis remakes jogáveis em JavaScript de clássicos do 2600 — Pong, Breakout, Space Invaders, Asteroids, Freeway e River Raid — para reviver os bons tempos do console.
 
-_The History of the 2600_
+_A história do 2600_
 
-The 2600 was a revolutionary gaming console that brought the excitement of arcade games into homes all over the world. Upon its release in 1979, the 2600 quickly became one of the most popular gifts of the holiday season, with millions of units sold in its first year. The inclusion of the classic arcade game Space Invaders only added to the 2600's popularity, leading to sales doubling in the following year with over 2 million units sold. The 2600's success continued for two more years, with almost 8 million units sold by 1982. The 2600 remains an icon of the gaming industry and a timeless symbol of gaming history.
+O 2600 foi um console revolucionário que levou a emoção dos fliperamas para dentro de casa em todo o mundo. Lançado nos Estados Unidos em setembro de 1977, tornou-se um dos presentes mais populares das festas de fim de ano, com milhões de unidades vendidas. A chegada do clássico Space Invaders aumentou ainda mais sua popularidade e fez as vendas dobrarem, com mais de 2 milhões de unidades vendidas em um ano. O sucesso continuou nos anos seguintes, chegando a quase 8 milhões de unidades vendidas até 1982. No Brasil, o console chegou oficialmente em 1983. O 2600 continua sendo um ícone da indústria de jogos e um símbolo atemporal da história dos videogames.
 
-_The Hardware Behind the 2600_
+_O hardware por trás do 2600_
 
-The 2600 was much more than just a gaming console. It was a complex piece of hardware, incorporating advanced circuitry and controllers to deliver an unparalleled gaming experience. This section of the webpage explores the hardware behind the 2600, showcasing the technological innovations that made it possible. From the use of integrated circuits to the custom controllers, the 2600 pushed the boundaries of what was possible in home gaming.
+O 2600 era muito mais do que um console de jogos: era um hardware engenhoso, que combinava circuitos e controles inovadores para entregar uma experiência de jogo sem igual na época. Esta seção da página explora o hardware por trás do 2600 e as inovações tecnológicas que o tornaram possível — dos circuitos integrados aos controles. O 2600 ampliou os limites do que era possível nos videogames domésticos.
 
-_Demo Games: six Atari 2600 classics_
+## :video_game: Demo Games
 
-The **Demo Game** page shares the look of the home page (video background, Poppins, red buttons) and turns the screen into a little Atari console: pick a cartridge and play six classics, rebuilt from scratch in JavaScript as a tribute — no original ROMs or artwork are used.
+A página **Demo Game** segue o visual da página inicial (vídeo de fundo, fonte Poppins, botões vermelhos) e transforma a tela em um pequeno console Atari: escolha um cartucho e jogue seis clássicos, refeitos do zero em JavaScript como homenagem — nenhuma ROM ou arte original é utilizada.
 
-| # | Game | Original release on the 2600 | Controls |
-|---|------|------------------------------|----------|
-| 01 | Pong | Video Olympics — Atari, 1977 | `W` `S` / `↑` `↓` (or mouse/finger) |
-| 02 | Breakout | Atari, 1978 | `A` `D` / `←` `→`, `Space` launches |
-| 03 | Invasores (Space Invaders tribute) | Atari, 1980 | `A` `D` / `←` `→`, `Space` fires |
-| 04 | Asteroides (Asteroids tribute) | Atari, 1981 | `←` `→` rotate, `↑` thrust, `Space` fires, `↓` hyperspace |
+| # | Jogo | Lançamento original no 2600 | Controles |
+|---|------|-----------------------------|-----------|
+| 01 | Pong | Video Olympics — Atari, 1977 | `W` `S` / `↑` `↓` (ou mouse/dedo) |
+| 02 | Breakout | Atari, 1978 | `A` `D` / `←` `→`, `Espaço` lança a bola |
+| 03 | Invasores (homenagem a Space Invaders) | Atari, 1980 | `A` `D` / `←` `→`, `Espaço` atira |
+| 04 | Asteroides (homenagem a Asteroids) | Atari, 1981 | `←` `→` giram, `↑` acelera, `Espaço` atira, `↓` hiperespaço |
 | 05 | Freeway | Activision, 1981 | `W` `S` / `↑` `↓` |
-| 06 | River Raid | Activision, 1982 | arrows move/accelerate/brake, `Space` fires |
+| 06 | River Raid | Activision, 1982 | setas movem/aceleram/freiam, `Espaço` atira |
 
-Shortcuts: `Enter` starts, `P`/`Esc` pauses, `M` toggles sound. On phones and tablets an on-screen D-pad and FIRE button appear. High scores are saved in the browser (localStorage), and each game can be opened directly with a hash, e.g. `src/demo-game/index.html#riverraid`.
+Atalhos: `Enter` inicia, `P`/`Esc` pausa e `M` liga/desliga o som. Em celulares e tablets aparecem um direcional e um botão FOGO na tela. Os recordes ficam salvos no navegador (localStorage), e cada jogo pode ser aberto direto pelo endereço, por exemplo `src/demo-game/index.html#riverraid`.
 
-Code layout:
+Estrutura do código:
 
 ```
 src/demo-game/
-├── index.html          # page (same design as the home page)
-├── css/style-game.css  # console, cartridges, touch controls
+├── index.html          # página (mesmo design da página inicial)
+├── css/style-game.css  # console, cartuchos e controles de toque
 └── js/
-    ├── engine.js       # game loop, input, sound, 3x5 pixel font, high scores
-    ├── main.js         # wires the page UI to the engine
-    └── games/          # one file per game: pong, breakout, invaders, asteroids, freeway, riverraid
+    ├── engine.js       # loop do jogo, entrada, som, fonte pixelada 3x5 e recordes
+    ├── main.js         # liga a interface da página ao console
+    └── games/          # um arquivo por jogo: pong, breakout, invaders, asteroids, freeway, riverraid
 ```
 
-To add a new game, create a file in `js/games/` that calls `Atari.register({ id, title, publisher, year, create(api) { return { update(input), draw(ctx) } } })` and add a `<script>` tag for it in `index.html`.
+Para adicionar um jogo novo, crie um arquivo em `js/games/` que chame `Atari.register({ id, title, publisher, year, create(api) { return { update(input), draw(ctx) } } })` e inclua a tag `<script>` correspondente no `index.html`.
 
-_Ongoing Improvements_
+_Melhorias contínuas_
 
-This project is constantly being improved and updated to provide the best possible experience for users. Whether you're a seasoned 2600 veteran or discovering the console for the first time, this webpage is sure to be a thrilling journey through gaming history.
+Este projeto está sempre sendo melhorado e atualizado para oferecer a melhor experiência possível. Seja você um veterano do 2600 ou alguém conhecendo o console agora, esta página é uma viagem emocionante pela história dos videogames.
 
-## :memo: License
+## :memo: Licença
 
-This project is under the GPL v3.0 license. See the [LICENSE](https://github.com/aragonxpd154/landing-page-atari-vcs-2600/blob/main/LICENSE) for more information.
+Este projeto está sob a licença GPL v3.0. Veja o arquivo [LICENSE](https://github.com/aragonxpd154/landing-page-atari-vcs-2600/blob/main/LICENSE) para mais informações.
 
 ---
 
-Made with ♥ by Marcos (Obel) :wave: [Get in touch!](https://www.linkedin.com/in/marcosobel)
+Feito com ♥ por Marcos (Obel) :wave: [Entre em contato!](https://www.linkedin.com/in/marcosobel)
